@@ -26,7 +26,7 @@ var config = {
     // path && publickPath
     output: {
         path        : __dirname + '/dist/',
-        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.ccironman.top/admin-fe/dist/',
+        publicPath  : 'dev' === WEBPACK_ENV ? '//s.ccironman.top/admin-fe/dist/' : '../',
         
         filename    : 'js/[name].js'
     },
@@ -87,7 +87,7 @@ var config = {
             favicon         : './favicon.ico',
             inject          : true,
             hash            : true,
-            chunks          : ['vendors', 'app'],
+            chunks: ['manifest', 'vendor', 'app'],
             chunksSortMode  : 'dependency',
             minify          : {
                 removeComments: true,
