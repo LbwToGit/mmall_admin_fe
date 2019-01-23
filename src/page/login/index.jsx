@@ -85,7 +85,7 @@ const Login = React.createClass({
                 </div>
             </div>
         );
-    }
+    } 
 });
 
 export default Login;
